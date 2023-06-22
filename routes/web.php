@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\kategoricontroller;
+use App\Http\Controllers\produkcontroller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,4 +30,13 @@ Route::controller(kategoricontroller::class)->prefix('kategori')->group(function
     Route::get('edit/{id}', 'edit')->name('kategori.edit');
     Route::post('edit/{id}', 'update')->name('kategori.tambah.update');
     Route::get('hapus/{id}', 'hapus')->name('kategori.hapus');
+}); 
+
+Route::controller(produkcontroller::class)->prefix('produk')->group(function () {
+    Route::get('', 'index')->name('produk');
+    Route::get('tambah', 'tambah')->name('produk.tambah');
+    Route::post('tambah', 'simpan')->name('produk.tambah.simpan');
+    Route::get('edit/{id}', 'edit')->name('produk.edit');
+    Route::post('edit/{id}', 'update')->name('produk.tambah.update');
+    Route::get('hapus/{id}', 'hapus')->name('produk.hapus');
 }); 

@@ -2,10 +2,10 @@
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-        <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-laugh-wink"></i>
+        <div class="sidebar-brand-icon rotate-n-1">
+            <img class="sidebar-card-illustration mb-1" src="img/marina.jpeg" width="50" height="50">
         </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3">Marina <sup>FrozenFood</sup></div>
     </a>
 
     <!-- Divider -->
@@ -21,7 +21,13 @@
     <li class="nav-item">
         <a class="nav-link" href="{{ route ('kategori') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>kategori</span></a>
+            <span>Kategori</span></a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route ('produk') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Produk</span></a>
     </li>
 
     <!-- Divider -->
@@ -34,9 +40,9 @@
 
     <!-- Sidebar Message -->
     <div class="sidebar-card d-none d-lg-flex">
-        <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
-        <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-        <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
+        <img class="sidebar-card-illustration mb-2" src="img/marina.jpeg" alt="...">
+        <p class="text-center mb-2"><strong>Tahu Walik</strong> Kelompok 2</p>
+        <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Pasti Bisa</a>
     </div>
 
 </ul>
