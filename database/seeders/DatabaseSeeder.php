@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Artikel;
+use App\Models\kategori;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,5 +20,19 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        Artikel::create([
+            'judul' => 'Tahu Walik',
+            'body' => 'Tahu Walik adalah makanan ygsadnowqndoqwkpd mqwpd qpw jqwdp ijqwpdiqwpdn qwdpqwndkwqdkpwqnd',
+            'excerpt' => 'Tahu Walik wmqdkqmwdkwd...',
+            'slug' => 'Tahu-Walik-Profile'
+        ]);
+
+        kategori::create([
+            'id_kategori' => 'TW001',       //isian sementara, asal ada datanya ja
+            'produk' => 'Tahu walik',
+            'artikel' => 'oqkwdqo j dqoijqwdj dowijqw od qwdjqodjq'
+        ]);
+        
     }
 }

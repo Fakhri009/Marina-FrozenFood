@@ -24,6 +24,12 @@
             <span>kategori</span></a>
     </li>
 
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route ('artikel') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Artikel</span></a>
+    </li>
+
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 
