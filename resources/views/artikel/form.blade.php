@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Form Barang')
+@section('title', 'Form Artikel')
 
 @section('contents')
 
@@ -10,7 +10,7 @@
     <div class ="col-12">
     <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">{{ isset ($artikel) ?'Fom Edit Barang':'Form Tambah Barang' }}</h6>
+        <h6 class="m-0 font-weight-bold text-primary">{{ isset ($artikel) ?'Form Edit Barang':'Form Tambah Data' }}</h6>
     </div>
     <div class="card-body">
         <div class="form-group">

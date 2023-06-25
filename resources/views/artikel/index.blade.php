@@ -8,7 +8,7 @@
         <h6 class="m-0 font-weight-bold text-primary">Data Artikel</h6>
     </div>
     <div class="card-body">
-        <a href="{{ route('artikel.create') }}" class="btn btn-primary mb-3">Tambah Artikel</a>
+        <a href="{{ route('artikel.create') }}" class="btn btn-primary mb-3">Tambah Data</a>
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
