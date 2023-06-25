@@ -40,3 +40,8 @@ Route::controller(produkcontroller::class)->prefix('produk')->group(function () 
     Route::post('edit/{id}', 'update')->name('produk.tambah.update');
     Route::get('hapus/{id}', 'hapus')->name('produk.hapus');
 }); 
+
+Route::controller(uploadcontroller::class)->prefix('upload')->group(function () {
+Route::get('/upload', 'uploadcontroller@upload');
+Route::post('/upload/proses', 'uploadcontroller@proses_upload');
+});

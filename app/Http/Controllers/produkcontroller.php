@@ -25,7 +25,6 @@ class produkcontroller extends Controller
             'stok'=>$request->stok,
             'foto'=>$request->foto,
         ];
-
         Produk::create($data);
         return redirect()->route('produk');
     }
@@ -39,7 +38,13 @@ class produkcontroller extends Controller
 
     public function update($id, Request $request)
     {
-        $data = [
+        $foto = $request->file('foto');
+        $filename =date ('Y-m-d').$foto->getClientOriginalName();
+        $path = 'foto-produk/'.$filename;
+
+        //Storage::disk('public')->put ($path, file_get_contents($foto));
+
+        $data = [ 
             'id_produk'=>$request->id_produk, 
             'nama_produk'=>$request->nama_produk, 
             'harga'=>$request->harga, 
@@ -47,6 +52,8 @@ class produkcontroller extends Controller
             'foto'=>$request->foto, 
         ];
         $produk = Produk::find($id)->update($data);
+
+
         return redirect()->route('produk');
 }
     public function hapus($id)

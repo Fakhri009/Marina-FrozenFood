@@ -5,7 +5,7 @@
 @section('contents')
 
 
-<form action="{{ isset($produk) ?route('produk.tambah.update', $produk->id) : route('produk.tambah.simpan') }}" method="post">
+<form action="{{ isset($produk) ?route('produk.tambah.update', $produk->id) : route('produk.tambah.simpan') }}" method="post" enctype="multipart/form-data">
     @csrf
 <div class="row">
     <div class ="col-12">
@@ -32,7 +32,7 @@
      </div>
       <div class="form-group">
         <label for="foto">Foto</label>
-        <input type="text" class="form-control" id="foto" name="foto" value="{{ isset($produk) ? $produk->foto: '' }}">
+        <input type="file" class="form-control" id="foto" name="foto">
     </div>
     <div class="card-footer">
         <button type="submit" class="btn btn-primary">Simpan</button>
