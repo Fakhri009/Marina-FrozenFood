@@ -14,10 +14,6 @@
     </div>
     <div class="card-body">
         <div class="form-group">
-            <label for="id_artikel">Id Artikel</label>
-            <input type="text" class="form-control" id="id_artikel" name="id_artikel" value="{{ isset($artikel) ? $artikel->id_artikel : '' }}">
-        </div>
-        <div class="form-group">
             <label for="judul">Judul</label>
             <input type="text" class="form-control" id="judul" name="judul" value="{{ isset($artikel) ? $artikel->judul : '' }}">
         </div>

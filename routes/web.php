@@ -28,13 +28,14 @@ Route::get('/dashboard', function () {
 
 
 //Route Artikel
+
 Route::controller(ArtikelController::class)->prefix('artikel')->group(function () {
     Route::get('', 'index')->name('artikel');
     Route::get('create', 'create')->name('artikel.create');
     Route::post('create', 'simpan')->name('artikel.create.simpan');
     Route::get('edit/{id}', 'edit')->name('artikel.edit');
-    Route::post('edit/{id}', 'update')->name('artikel.tambah.update');
-    Route::get('hapus/{id}', 'hapus')->name('artikel.hapus');
+    Route::post('edit/{id}', 'update')->name('artikel.create.update');
+    Route::get('destroy/{id}', 'destroy')->name('artikel.destroy');
 }); 
 
 

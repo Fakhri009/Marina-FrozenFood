@@ -1,10 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Artikel;
 use App\Http\Requests\StoreArtikelRequest;
-use App\Http\Requests\UpdateArtikelRequest;
+use Illuminate\Http\Request;
 
 class ArtikelController extends Controller
 {
@@ -25,12 +24,21 @@ class ArtikelController extends Controller
         return view ('artikel.form');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreArtikelRequest $request)
+    public function simpan(Request $request) 
     {
-        //
+        $data = [
+            'judul'=>$request->judul, 
+            'body'=>$request->body, 
+            'excerpt'=>$request->excerpt, 
+        ];
+
+        Artikel::create($data);
+        return redirect()->route('artikel');
+    }
+
+    public function store(Request $request)
+    {
+
     }
 
     /**
@@ -38,30 +46,40 @@ class ArtikelController extends Controller
      */
     public function show(Artikel $artikel)
     {
-        //
+        
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Artikel $artikel)
+    public function edit($id, Artikel $artikels)
     {
-        //
+        $artikels = Artikel::find($id);
+        return view('artikel.form', [
+            'artikel' => $artikels
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateArtikelRequest $request, Artikel $artikel)
+    public function update(Request $request, $id)
     {
-        //
+        $data = [
+            'judul'=>$request->judul, 
+            'body'=>$request->body, 
+            'excerpt'=>$request->excerpt, 
+        ];
+        $artikel = Artikel::find($id)->update($data);
+        return redirect()->route('artikel');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Artikel $artikel)
+    public function destroy($id)
     {
-        //
+        Artikel::find($id)->delete();
+        return redirect()->route('artikel');
     }
 }

@@ -32,7 +32,7 @@
                         <td>{{ $row->excerpt }}</td>
                         <td class="">
                             <a href="{{ route('artikel.edit', $row->id) }}" class="btn btn-warning">Edit</a>
-                            <a href="{{ route('artikel.hapus', $row->id) }}" class="btn btn-danger">Hapus</a>
+                            <a href="{{ route('artikel.destroy', $row->id) }}" onclick="return confirm('Anda yakin ? ingin menghapus data ini ?')" class="btn btn-danger">Hapus</a>
                         </td>
                     </tr>
                     @endforeach

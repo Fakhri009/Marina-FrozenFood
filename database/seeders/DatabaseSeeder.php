@@ -24,8 +24,7 @@ class DatabaseSeeder extends Seeder
         Artikel::create([
             'judul' => 'Tahu Walik',
             'body' => 'Tahu Walik adalah makanan ygsadnowqndoqwkpd mqwpd qpw jqwdp ijqwpdiqwpdn qwdpqwndkwqdkpwqnd',
-            'excerpt' => 'Tahu Walik wmqdkqmwdkwd...',
-            'slug' => 'Tahu-Walik-Profile'
+            'excerpt' => 'Tahu Walik wmqdkqmwdkwd...'
         ]);
 
         kategori::create([
