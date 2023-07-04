@@ -38,11 +38,6 @@
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
     </div>
 
-    <!-- Sidebar Message -->
-    <div class="sidebar-card d-none d-lg-flex">
-        <img class="sidebar-card-illustration mb-2" src="img/marina.jpeg" alt="...">
-        <p class="text-center mb-2"><strong>Tahu Walik</strong> Kelompok 2</p>
-        <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Pasti Bisa</a>
-    </div>
+
 
 </ul>
