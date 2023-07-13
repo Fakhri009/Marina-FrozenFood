@@ -31,7 +31,9 @@
                         <td>{{ $row->nama_produk }}</td>
                         <td>{{ $row->harga }}</td>
                         <td>{{ $row->stok }}</td>
-                        <td>{{ $row->foto }}</td>
+                        <td>
+                            <img src="{{ asset('foto-produk/'.$row->foto) }}" alt="" style="width : 40px;;">
+                        </td>
                         <td>
                             <a href="{{ route('produk.edit', $row->id) }}" class="btn btn-warning">Edit</a>
                             <a href="{{ route('produk.hapus', $row->id) }}" class="btn btn-danger">Hapus</a>

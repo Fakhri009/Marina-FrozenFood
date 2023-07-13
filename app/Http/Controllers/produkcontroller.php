@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Produk;
 use Illuminate\Http\Request;
 
+
 class produkcontroller extends Controller
 {
     public function index()
@@ -25,8 +26,12 @@ class produkcontroller extends Controller
             'stok'=>$request->stok,
             'foto'=>$request->foto,
         ];
+
+        $request->foto->produk('foto-produk');
+
         Produk::create($data);
         return redirect()->route('produk');
+        
     }
 
     public function edit($id)
@@ -38,10 +43,7 @@ class produkcontroller extends Controller
 
     public function update($id, Request $request)
     {
-        $foto = $request->file('foto');
-        $filename =date ('Y-m-d').$foto->getClientOriginalName();
-        $path = 'foto-produk/'.$filename;
-
+        
         //Storage::disk('public')->put ($path, file_get_contents($foto));
 
         $data = [ 
