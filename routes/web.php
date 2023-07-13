@@ -18,16 +18,14 @@ use App\Http\Controllers\kategoricontroller;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+   return view('dashboard');
 })->name('dashboard');
 
 Route::controller(kategoricontroller::class)->prefix('kategori')->group(function () {
@@ -62,7 +60,7 @@ Route::get('/upload', 'uploadcontroller@upload');
 Route::post('/upload/proses', 'uploadcontroller@proses_upload');
 });
 
-
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
