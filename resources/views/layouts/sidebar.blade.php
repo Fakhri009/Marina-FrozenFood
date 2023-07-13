@@ -30,6 +30,12 @@
             <span>Produk</span></a>
     </li>
 
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route ('promo') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Promo</span></a>
+    </li>
+
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 

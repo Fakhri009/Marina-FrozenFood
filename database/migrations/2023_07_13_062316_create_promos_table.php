@@ -3,7 +3,6 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use PhpParser\Node\NullableType;
 
 return new class extends Migration
 {
@@ -12,12 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('kategori', function (Blueprint $table) {
+        Schema::create('promo', function (Blueprint $table) {
             $table->id();
-            $table->string('id_kategori')->unique();
-            $table->string('id_produk')->unique();
-            $table->string('produk')->nullable();
-            $table->string('artikel')->nullable();
+            $table->string('id_promo')->nullable();
+            $table->string('nama_promo')->nullable();
+            $table->string('harga')->nullable();
+            $table->string('stok')->nullable();
+            $table->string('foto')->nullable();
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('kategori');
+        Schema::dropIfExists('promo');
     }
 };

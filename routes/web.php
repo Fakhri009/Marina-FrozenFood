@@ -1,8 +1,12 @@
 <?php
 
-use App\Http\Controllers\kategoricontroller;
-use App\Http\Controllers\produkcontroller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\promocontroller;
+use App\Http\Controllers\produkcontroller;
+use App\Http\Controllers\kategoricontroller;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/', function () {
     return view('welcome');
@@ -41,7 +48,21 @@ Route::controller(produkcontroller::class)->prefix('produk')->group(function () 
     Route::get('hapus/{id}', 'hapus')->name('produk.hapus');
 }); 
 
+Route::controller(promocontroller::class)->prefix('promo')->group(function () {
+    Route::get('', 'index')->name('promo');
+    Route::get('tambah', 'tambah')->name('promo.tambah');
+    Route::post('tambah', 'simpan')->name('promo.tambah.simpan');
+    Route::get('edit/{id}', 'edit')->name('promo.edit');
+    Route::post('edit/{id}', 'update')->name('promo.tambah.update');
+    Route::get('hapus/{id}', 'hapus')->name('promo.hapus');
+}); 
+
 Route::controller(uploadcontroller::class)->prefix('upload')->group(function () {
 Route::get('/upload', 'uploadcontroller@upload');
 Route::post('/upload/proses', 'uploadcontroller@proses_upload');
 });
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
