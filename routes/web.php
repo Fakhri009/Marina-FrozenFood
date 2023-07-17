@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -27,6 +29,8 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
    return view('dashboard');
 })->name('dashboard');
+Route::get('/', [LoginController::class, 'showLoginForm']);
+Route::get('/', [DashboardController::class, 'index']);
 
 Route::controller(kategoricontroller::class)->prefix('kategori')->group(function () {
     Route::get('', 'index')->name('kategori');
@@ -62,5 +66,5 @@ Route::post('/upload/proses', 'uploadcontroller@proses_upload');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
