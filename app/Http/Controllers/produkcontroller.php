@@ -27,7 +27,6 @@ class produkcontroller extends Controller
             'foto'=>$request->foto,
         ];
 
-        $request->foto->produk('foto-produk');
 
         Produk::create($data);
         return redirect()->route('produk');
@@ -54,6 +53,9 @@ class produkcontroller extends Controller
             'foto'=>$request->foto, 
         ];
         $produk = Produk::find($id)->update($data);
+        $foto = $request->file('foto');
+        $filename =date ('Y-m-d').$foto->getClientOriginalName();
+        $path = 'foto-produk/'.$filename;
 
 
         return redirect()->route('produk');
