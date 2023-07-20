@@ -32,7 +32,9 @@
                         <td>{{ $row->harga }}</td>
                         <td>{{ $row->stok }}</td>
                         <td>
-                            <img src="{{ asset('foto-produk/'.$row->foto) }}" alt="" style="width : 40px;;">
+                            @if ($row->foto)
+                                <img src="{{ asset('storage/' . $row->foto) }}" alt="" style="width : 100px;;">
+                            @endif
                         </td>
                         <td>
                             <a href="{{ route('produk.edit', $row->id) }}" class="btn btn-warning">Edit</a>
