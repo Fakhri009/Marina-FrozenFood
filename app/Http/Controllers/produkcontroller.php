@@ -66,8 +66,6 @@ class produkcontroller extends Controller
         $produk = Produk::find($id)->update($data);
         $filename =date ('Y-m-d').$request->file('foto')->getClientOriginalName();
         $path = '/product-images'.$filename;
-
-
         return redirect()->route('produk');
 }
     public function hapus($id)

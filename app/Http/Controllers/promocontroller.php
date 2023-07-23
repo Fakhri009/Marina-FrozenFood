@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Promo;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Storage;
 
 class promocontroller extends Controller
 {
@@ -24,8 +24,11 @@ class promocontroller extends Controller
             'nama_promo'=>$request->nama_promo, 
             'harga'=>$request->harga, 
             'stok'=>$request->stok,
-            'foto'=>$request->foto,
         ];
+        if ($request->file('foto')) {
+            $data['foto'] = $request->file('foto')->store('promo-images'); 
+        }
+
         Promo::create($data);
         return redirect()->route('promo');
     }
@@ -50,15 +53,26 @@ class promocontroller extends Controller
             'nama_promo'=>$request->nama_promo, 
             'harga'=>$request->harga, 
             'stok'=>$request->stok, 
-            'foto'=>$request->foto, 
         ];
+
+        if ($request->file('foto')) {
+            if ($request->oldImage) {
+                Storage::delete($request->oldImage);
+            }
+            $data['foto'] = $request->file('foto')->store('product-images');
+        }
+
         $promo = Promo::find($id)->update($data);
-
-
+        $filename =date ('Y-m-d').$request->file('foto')->getClientOriginalName();
+        $path = '/promo-images'.$filename;
         return redirect()->route('promo');
 }
     public function hapus($id)
     {
+        $foto = Promo::find($id)->foto;
+        if ($foto) {
+            Storage::delete($foto);
+        }
         Promo::find($id)->delete();
         return redirect()->route('promo');
     }

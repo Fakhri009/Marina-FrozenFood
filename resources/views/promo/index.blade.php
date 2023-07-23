@@ -31,7 +31,11 @@
                         <td>{{ $row->nama_promo }}</td>
                         <td>{{ $row->harga }}</td>
                         <td>{{ $row->stok }}</td>
-                        <td>{{ $row->foto }}</td>
+                        <td>
+                            @if ($row->foto)
+                            <img src="{{ asset('storage/' . $row->foto) }}" alt="" style="width : 100px;;">
+                        @endif
+                        </td>
                         <td>
                             <a href="{{ route('promo.edit', $row->id) }}" class="btn btn-warning">Edit</a>
                             <a href="{{ route('promo.hapus', $row->id) }}" class="btn btn-danger">Hapus</a>

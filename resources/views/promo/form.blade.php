@@ -30,14 +30,35 @@
         <label for="stok">Stok</label>
         <input type="text" class="form-control" id="stok" name="stok" value="{{ isset($promo) ? $promo->stok: '' }}">
      </div>
-      <div class="form-group">
-        <label for="foto">Foto</label>
-        <input type="file" class="form-control" id="foto" name="foto">
+     <div class="form-group">
+        <input type="hidden" name="oldImage" value="{{isset($promo->foto) ? $promo->foto : '' }}">
+        @if (isset($promo->foto) ? true : false)
+            <img src="{{ asset('storage/' . $promo->foto) }}" class="img-preview img-fluid mb-3 col-sm-5">
+        @else
+            <img class="img-preview img-fluid mb-3 col-sm-5">
+        @endif
+        <label for="foto" class="d-block">Foto</label>
+        <input type="file" class="form-control" id="foto" name="foto" onchange="previewImage()">
     </div>
     <div class="card-footer">
         <button type="submit" class="btn btn-primary">Simpan</button>
 </div>
 
 </form>
+<script>
+    function previewImage() {
+        const image = document.querySelector('#foto');
+        const imgPreview = document.querySelector('.img-preview'); 
+        
+        imgPreview.display = 'block';
+
+        const oFReader = new FileReader();
+        oFReader.readAsDataURL(image.files[0]);
+
+        oFReader.onload = function(oFREvent) {
+            imgPreview.src = oFREvent.target.result;
+        }
+    }
+</script>
 
 @endsection
