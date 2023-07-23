@@ -24,15 +24,14 @@ use App\Http\Controllers\kategoricontroller;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->middleware('auth');
 
 Route::get('/dashboard', function () {
    return view('dashboard');
-})->name('dashboard');
-Route::get('/', [LoginController::class, 'showLoginForm']);
-Route::get('/', [DashboardController::class, 'index']);
+})->name('dashboard')->middleware('auth');
 
-Route::controller(kategoricontroller::class)->prefix('kategori')->group(function () {
+
+    Route::controller(kategoricontroller::class)->prefix('kategori')->group(function () {
     Route::get('', 'index')->name('kategori');
     Route::get('tambah', 'tambah')->name('kategori.tambah');
     Route::post('tambah', 'simpan')->name('kategori.tambah.simpan');
@@ -63,6 +62,11 @@ Route::controller(uploadcontroller::class)->prefix('upload')->group(function () 
 Route::get('/upload', 'uploadcontroller@upload');
 Route::post('/upload/proses', 'uploadcontroller@proses_upload');
 });
+
+
+Route::get('/login', [LoginController::class, 'showLoginForm']);
+Route::get('/logout', [LoginController::class, 'logout']);
+Route::get('/', [DashboardController::class, 'index'])->middleware('auth');
 
 Auth::routes();
 
