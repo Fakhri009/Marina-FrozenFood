@@ -18,12 +18,8 @@
             <input type="text" class="form-control" id="id_kategori" name="id_kategori" value="{{ isset($kategori) ? $kategori->id_kategori : '' }}">
         </div>
         <div class="form-group">
-            <label for="produk">Produk</label>
-            <input type="text" class="form-control" id="produk" name="produk" value="{{ isset($kategori) ? $kategori->produk : '' }}">
-        </div>
-        <div class="form-group">
-            <label for="artikel">Artikel</label>
-            <input type="text" class="form-control" id="artikel" name="artikel" value="{{ isset($kategori) ? $kategori->artikel : '' }}">
+            <label for="produk">Nama Kategori</label>
+            <input type="text" class="form-control" id="produk" name="produk" value="{{ isset($kategori) ? $kategori->nama_kategori : '' }}">
         </div>
     </div>
     <div class="card-footer">

@@ -15,8 +15,7 @@
                     <tr>
                         <th>No</th>
                         <th>Id Kategori</th>
-                        <th>Produk</th>
-                        <th>Artikel</th>
+                        <th>Nama Kategori</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -26,8 +25,7 @@
                     <tr>
                         <th>{{ $no++ }}</th>
                         <td>{{ $row->id_kategori }}</td>
-                        <td>{{ $row->produk }}</td>
-                        <td>{{ $row->artikel }}</td>
+                        <td>{{ $row->nama_kategori }}</td>
                         <td>
                             <a href="{{ route('kategori.edit', $row->id) }}" class="btn btn-warning">Edit</a>
                             <a href="{{ route('kategori.hapus', $row->id) }}" class="btn btn-danger">Hapus</a>

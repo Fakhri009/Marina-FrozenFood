@@ -20,8 +20,7 @@ class kategoricontroller extends Controller
     {
         $data = [
             'id_kategori'=>$request->id_kategori, 
-            'produk'=>$request->produk, 
-            'artikel'=>$request->artikel, 
+            'nama_kategori'=>$request->nama_kategori, 
         ];
 
         Kategori::create($data);
@@ -39,8 +38,7 @@ class kategoricontroller extends Controller
     {
         $data = [
             'id_kategori'=>$request->id_kategori, 
-            'produk'=>$request->produk, 
-            'artikel'=>$request->artikel, 
+            'nama_kategori'=>$request->nama_kategori, 
         ];
         $kategori = Kategori::find($id)->update($data);
         return redirect()->route('kategori');

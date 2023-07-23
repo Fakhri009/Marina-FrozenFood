@@ -31,6 +31,12 @@
     </li>
 
     <li class="nav-item">
+        <a class="nav-link" href="{{ route ('artikel') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Artikel</span></a>
+    </li>
+
+    <li class="nav-item">
         <a class="nav-link" href="{{ route ('promo') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Promo</span></a>
