@@ -101,18 +101,22 @@ class DatabaseSeeder extends Seeder
 
         Kategori::create([
                 'id_kategori' => 'A01',
+                'produk_id'=> '1',
                 'nama_kategori' => 'Mercon',
          ]);
         Kategori::create([
                 'id_kategori' => 'A02',
+                'produk_id'=> '1',
                 'nama_kategori' => 'Original',
          ]);
         Kategori::create([
                 'id_kategori' => 'B01',
+                'produk_id' => '2',
                 'nama_kategori' => 'Coklat',
          ]);
         Kategori::create([
                 'id_kategori' => 'B02',
+                'produk_id' => '2',
                 'nama_kategori' => 'Vanilla',
          ]);
 
@@ -137,13 +141,13 @@ class DatabaseSeeder extends Seeder
             'nama_promo' => 'Tahu Walik',
             'harga' => 'Rp 8.000',
             'stok' => '10',
-     ]);
+        ]);
          Promo::create([
             'id_promo' => 'B02',
             'nama_promo' => 'Es Jelly',
             'harga' => 'Rp 6.000',
             'stok' => '10',
-     ]);
+        ]);
 
 
 

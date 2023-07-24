@@ -46,7 +46,8 @@ class ArtikelController extends Controller
      */
     public function show(Artikel $artikel)
     {
-        
+        $artikel = Artikel::first();
+        return view('home', compact('artikel'));
     }
 
     /**
