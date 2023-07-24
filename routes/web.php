@@ -1,15 +1,16 @@
 <?php
 
-use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\promocontroller;
 use App\Http\Controllers\produkcontroller;
-use App\Http\Controllers\kategoricontroller;
 use App\Http\Controllers\ArtikelController;
-
+use App\Http\Controllers\kategoricontroller;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Admin\dashboardcontrollers;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,6 +30,7 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
    return view('dashboard');
 })->name('dashboard')->middleware('auth');
+
 
 
     Route::controller(kategoricontroller::class)->prefix('kategori')->group(function () {
@@ -80,3 +82,11 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
+Route::controller(TransaksiController::class)->prefix('transaksi')->group(function () {
+    Route::get('', 'index')->name('transaksi');
+    Route::get('tambah', 'tambah')->name('transaksi.tambah');
+    Route::post('tambah', 'simpan')->name('transaksi.tambah.simpan');
+    Route::get('edit/{id}', 'edit')->name('transaksi.edit');
+    Route::post('edit/{id}', 'update')->name('transaksi.tambah.update');
+    Route::get('hapus/{id}', 'hapus')->name('transaksi.hapus');
+}); 
