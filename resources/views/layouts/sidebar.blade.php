@@ -20,30 +20,30 @@
 
     <li class="nav-item">
         <a class="nav-link" href="{{ route ('kategori') }}">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i class="bi bi-tag-fill"></i>
             <span>Kategori</span></a>
     </li>
 
     <li class="nav-item">
         <a class="nav-link" href="{{ route ('produk') }}">
-            <i class="bi bi-bag-check-fill"></i>
+            <i class="bi bi-cart-check-fill"></i>
             <span>Produk</span></a>
     </li>
-
+   
     <li class="nav-item">
         <a class="nav-link" href="{{ route ('artikel') }}">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i class="bi bi-card-list"></i>
             <span>Artikel</span></a>
     </li>
 
     <li class="nav-item">
         <a class="nav-link" href="{{ route ('promo') }}">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i class="fas bi-bag-check-fill"></i>
             <span>Promo</span></a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="{{ route ('transaksi') }}">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i class="bi bi-clipboard2-check-fill"></i>
             <span>Transaksi</span></a>
     </li>
 
