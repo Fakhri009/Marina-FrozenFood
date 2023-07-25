@@ -136,15 +136,15 @@ class DatabaseSeeder extends Seeder
 
 
 
-         Promo::create([
+        Promo::create([
             'id_promo' => 'A01',
-            'nama_promo' => 'Tahu Walik',
+            'judul' => 'Jumat Berkah',
             'harga' => 'Rp 8.000',
             'stok' => '10',
         ]);
          Promo::create([
-            'id_promo' => 'B02',
-            'nama_promo' => 'Es Jelly',
+            'id_promo' => 'B01',
+            'judul' => 'Harga Merdeka',
             'harga' => 'Rp 6.000',
             'stok' => '10',
         ]);

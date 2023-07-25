@@ -19,8 +19,8 @@
             <input type="text" class="form-control" id="id_promo" name="id_promo" value="{{ isset($promo) ? $promo->id_promo : '' }}">
         </div>
         <div class="form-group">
-            <label for="nama_promo">Nama promo</label>
-            <input type="text" class="form-control" id="nama_promo" name="nama_promo" value="{{ isset($promo) ? $promo->nama_promo : '' }}">
+            <label for="judul">Judul</label>
+            <input type="text" class="form-control" id="judul" name="judul" value="{{ isset($promo) ? $promo->judul : '' }}">
         </div>
         <div class="form-group">
             <label for="harga">Harga</label>

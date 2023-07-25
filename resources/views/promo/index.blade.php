@@ -14,8 +14,8 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Id produk</th>
-                        <th>Nama produk</th>
+                        <th>Id Promo</th>
+                        <th>Judul</th>
                         <th>Harga</th>
                         <th>Stok</th>
                         <th>Foto</th>
@@ -28,7 +28,7 @@
                     <tr>
                         <th>{{ $no++ }}</th>
                         <td>{{ $row->id_promo }}</td>
-                        <td>{{ $row->nama_promo }}</td>
+                        <td>{{ $row->judul }}</td>
                         <td>{{ $row->harga }}</td>
                         <td>{{ $row->stok }}</td>
                         <td>

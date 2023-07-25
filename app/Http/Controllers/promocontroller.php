@@ -21,7 +21,7 @@ class promocontroller extends Controller
     {
         $data = [
             'id_promo'=>$request->id_promo, 
-            'nama_promo'=>$request->nama_promo, 
+            'judul'=>$request->judul, 
             'harga'=>$request->harga, 
             'stok'=>$request->stok,
         ];
@@ -50,7 +50,7 @@ class promocontroller extends Controller
 
         $data = [ 
             'id_promo'=>$request->id_promo, 
-            'nama_promo'=>$request->nama_promo, 
+            'judul'=>$request->judul, 
             'harga'=>$request->harga, 
             'stok'=>$request->stok, 
         ];

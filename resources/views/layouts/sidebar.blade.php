@@ -1,9 +1,9 @@
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="navbar-nav sidebar  sidebar-dark sidebar .main .list-item:hover accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
+    <div class="sidebar-brand-icon rotate-n-1">
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-        <div class="sidebar-brand-icon rotate-n-1">
-            <img class="sidebar-card-illustration mb-1" src="img/marina.jpeg" width="50" height="50">
+            <img class="sidebar-card-illustration mb-1" src={{url('/assets/Logo-MarinaFF.png')}} width="70" height="70">
         </div>
         <div class="sidebar-brand-text mx-3">Marina <sup>FrozenFood</sup></div>
     </a>
@@ -16,7 +16,7 @@
         <a class="nav-link" href="{{ route ('dashboard') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
-    </li>
+
 
     <li class="nav-item">
         <a class="nav-link" href="{{ route ('kategori') }}">
@@ -26,7 +26,7 @@
 
     <li class="nav-item">
         <a class="nav-link" href="{{ route ('produk') }}">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i class="bi bi-bag-check-fill"></i>
             <span>Produk</span></a>
     </li>
 

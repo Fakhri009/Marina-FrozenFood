@@ -10,5 +10,5 @@ class promo extends Model
     use HasFactory;
     protected $table = 'promo';
     protected $primarykey ='id_promo';
-    protected $fillable = ['id_promo', 'nama_promo', 'harga', 'stok', 'foto'];
+    protected $fillable = ['id_promo', 'judul', 'harga', 'stok', 'foto'];
 }

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('promo', function (Blueprint $table) {
             $table->id();
             $table->string('id_promo')->nullable();
-            $table->string('nama_promo')->nullable();
+            $table->string('judul')->nullable();
             $table->string('harga')->nullable();
             $table->string('stok')->nullable();
             $table->string('foto')->nullable();
