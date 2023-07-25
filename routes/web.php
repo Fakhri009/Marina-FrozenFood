@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Artikel;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -37,8 +38,11 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
-Route::get('/varian', function () {
-    return view('varian');
+Route::get('/detail', function () {
+    return view('detail', [
+        'title' => 'Detail',
+        'artikel' => Artikel::first()
+    ]);
 });
 
 Route::get('/dashboard', function () {
