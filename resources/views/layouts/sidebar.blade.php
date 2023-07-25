@@ -9,10 +9,16 @@
     </a>
 
     <!-- Divider -->
-    <hr class="my-0 sidebar-divider">
+
+    <!-- <hr class="sidebar-divider my-0">
+
+    <h6 class="sidebar-heading d-flex justify-content-between align-item-center px-3 mt-4 mb-1 text-muted">
+        <span>Menu</span>
+    </h6> -->
+    
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item">
+    <li class="nav-item" >
         <a class="nav-link" href="{{ route ('dashboard') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>

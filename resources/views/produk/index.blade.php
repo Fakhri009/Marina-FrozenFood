@@ -29,7 +29,9 @@
                         <th>{{ $no++ }}</th>
                         <td>{{ $row->id_produk }}</td>
                         <td>{{ $row->nama_produk }}</td>
-                        <td>{{ $row->harga }}</td>
+                      
+                       <td>{{ $row->harga }}
+
                         <td>{{ $row->stok }}</td>
                         <td>
                             @if ($row->foto)
