@@ -8,8 +8,8 @@
     @csrf
 <div class="row">
     <div class ="col-12">
-    <div class="card shadow mb-4">
-    <div class="card-header py-3">
+    <div class="mb-4 shadow card">
+    <div class="py-3 card-header">
         <h6 class="m-0 font-weight-bold text-primary">{{ isset ($artikel) ?'Form Edit Barang':'Form Tambah Data' }}</h6>
     </div>
     <div class="card-body">
@@ -19,7 +19,8 @@
         </div>
         <div class="form-group">
             <label for="body">Body</label>
-            <input type="text" class="form-control" id="body" name="body" value="{{ isset($artikel) ? $artikel->body : '' }}">
+            <input type="hidden" class="form-control" id="body" name="body" value="{{ isset($artikel) ? $artikel->body : '' }}">
+            <trix-editor input="body"></trix-editor>
         </div>
         <div class="form-group">
             <label for="excerpt">Excerpt</label>

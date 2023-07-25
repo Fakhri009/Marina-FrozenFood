@@ -19,6 +19,8 @@
     
         <!-- Custom styles for this template-->
         <link href="{{ asset('css/sb-admin-2.css') }}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0/dist/trix.css">
+        <script type="text/javascript" src="https://unpkg.com/trix@2.0.0/dist/trix.umd.min.js"></script>
 </head>
 <body id="page-top">
     
@@ -43,8 +45,8 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">@yield('title')</h1>
+                    <div class="mb-4 d-sm-flex align-items-center justify-content-between">
+                        <h1 class="mb-0 text-gray-800 h3">@yield('title')</h1>
 
                     </div>
 
@@ -70,7 +72,7 @@
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
+    <a class="rounded scroll-to-top" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
 

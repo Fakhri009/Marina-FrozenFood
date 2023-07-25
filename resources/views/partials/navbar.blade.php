@@ -4,7 +4,7 @@
             <div class="p-2 font-bold rounded">Marina Frozen Food</div>
             </a>
         </div>
-        <span class="z-10 content-around block text-3xl bg-transparent cursor-pointer md:hidden">
+        <span class="z-10 content-around block text-3xl p-5 bg-transparent cursor-pointer md:hidden">
             <button onclick="Menu()"><i class="fa-solid fa-bars"></i></button>
         </span>
         <div id="sidebar" class="md:flex md:flex-col md:items-center z-[1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-100 top-[-400px] transition-all ease-in-out duration-500">

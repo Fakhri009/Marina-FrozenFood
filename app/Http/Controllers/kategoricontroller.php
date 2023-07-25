@@ -11,15 +11,22 @@ class kategoricontroller extends Controller
           $kategori = Kategori::get();
           return view ('kategori.index', ['kategori'=>$kategori]);
     }
+    public function show()
+    {
+        $kategori = Kategori::all();
+        return view('kategori.form', compact('kategori'));
+    }
 
     public function tambah()
     {
+        $kategori = Kategori::get();
         return view ('kategori.form');
     }
     public function simpan(Request $request) 
     {
         $data = [
-            'id_kategori'=>$request->id_kategori, 
+            'id_kategori'=>$request->id_kategori,
+            'produk_id'=>$request->produk_id,
             'nama_kategori'=>$request->nama_kategori, 
         ];
 
@@ -37,7 +44,8 @@ class kategoricontroller extends Controller
     public function update($id, Request $request)
     {
         $data = [
-            'id_kategori'=>$request->id_kategori, 
+            'id_kategori'=>$request->id_kategori,
+            'produk_id'=>$request->produk_id,
             'nama_kategori'=>$request->nama_kategori, 
         ];
         $kategori = Kategori::find($id)->update($data);

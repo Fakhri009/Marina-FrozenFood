@@ -3,18 +3,19 @@
 @section('title', 'Kategori')
 
 @section('contents')
-<div class="card shadow mb-4">
-    <div class="card-header py-3">
+<div class="mb-4 shadow card">
+    <div class="py-3 card-header">
         <h6 class="m-0 font-weight-bold text-primary">Data Kategori</h6>
     </div>
     <div class="card-body">
-        <a href="{{ route('kategori.tambah') }}" class="btn btn-primary mb-3">Tambah Kategori</a>
+        <a href="{{ route('kategori.tambah') }}" class="mb-3 btn btn-primary">Tambah Kategori</a>
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
                         <th>No</th>
                         <th>Id Kategori</th>
+                        <th>Produk id</th>
                         <th>Nama Kategori</th>
                         <th>Aksi</th>
                     </tr>
@@ -25,6 +26,7 @@
                     <tr>
                         <th>{{ $no++ }}</th>
                         <td>{{ $row->id_kategori }}</td>
+                        <td>{{ $row->produk_id }}</td>
                         <td>{{ $row->nama_kategori }}</td>
                         <td>
                             <a href="{{ route('kategori.edit', $row->id) }}" class="btn btn-warning">Edit</a>

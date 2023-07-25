@@ -28,7 +28,11 @@ Route::get('/', [ArtikelController::class, 'show']);
 Route::get('/products', [produkcontroller::class, 'show']);
 
 Route::get('/about', function () {
-    return view('about');
+    return view('about', [
+        'title' => 'Hello',
+        'second_title' => 'About Us',
+        'body' => 'Terima kasih sudah menjadi pelanggan setia kami. Kami sangat menghargai upaya anda dalam menyampaikan keluhan/kritik & saran terhadap produk dan layanan kami. Untuk keluhan/kritik & saran bisa disampaikan melalui Email atau Direct Message ke Instagram kami'
+    ]);
 });
 Route::get('/contact', function () {
     return view('contact');
