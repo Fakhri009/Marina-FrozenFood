@@ -2,13 +2,14 @@
 
     <!-- Sidebar - Brand -->
     <div class="sidebar-brand-icon rotate-n-1">
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-            <img class="sidebar-card-illustration mb-1" src={{url('/assets/Logo-MarinaFF.png')}} width="70" height="70">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard">
+            <img class="mb-1 sidebar-card-illustration" src={{url('/assets/Logo-MarinaFF.png')}} width="70" height="70">
         </div>
-        <div class="sidebar-brand-text mx-3">Marina <sup>FrozenFood</sup></div>
+        <div class="mx-3 sidebar-brand-text">Marina <sup>FrozenFood</sup></div>
     </a>
 
     <!-- Divider -->
+
     <!-- <hr class="sidebar-divider my-0">
 
     <h6 class="sidebar-heading d-flex justify-content-between align-item-center px-3 mt-4 mb-1 text-muted">
@@ -57,7 +58,7 @@
 
     <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center d-none d-md-inline">
-        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        <button class="border-0 rounded-circle" id="sidebarToggle"></button>
     </div>
 
 

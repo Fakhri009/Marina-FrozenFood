@@ -8,14 +8,18 @@
     @csrf
 <div class="row">
     <div class ="col-12">
-    <div class="card shadow mb-4">
-    <div class="card-header py-3">
+    <div class="mb-4 shadow card">
+    <div class="py-3 card-header">
         <h6 class="m-0 font-weight-bold text-primary">{{ isset ($kategori) ?'Fom Edit Barang':'Form Tambah Barang' }}</h6>
     </div>
     <div class="card-body">
         <div class="form-group">
             <label for="id_kategori">Id Kategori</label>
             <input type="text" class="form-control" id="id_kategori" name="id_kategori" value="{{ isset($kategori) ? $kategori->id_kategori : '' }}">
+        </div>
+        <div class="form-group">
+            <label for="id_kategori">Jenis Produk</label>
+            <input type="text" class="form-control" id="produk_id" name="produk_id" value="{{ isset($kategori) ? $kategori->produk_id : '' }}">
         </div>
         <div class="form-group">
             <label for="produk">Nama Kategori</label>
