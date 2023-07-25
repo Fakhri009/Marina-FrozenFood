@@ -22,7 +22,7 @@
                             </p>
                             <div class="px-6 pt-4 pb-2">
                             @foreach($item->kategori as $items)
-                                <a href="#" class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ $items->nama_kategori }}</a>
+                                <a href="https://wa.me/6283143463416?text=Nama%20%3A%0AProduk%20%3A%20Tahu%20Walik%0Avarian%20%3A%20Original%2FMercon%2FMix%0Apcs%20%3A%20%0Ano%20hp%20%3A%20%0Aalamat%20%3A%20" class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ $items->nama_kategori }}</a>
                             @endforeach
                             </div>
                             <div>
