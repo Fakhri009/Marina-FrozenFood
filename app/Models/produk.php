@@ -12,4 +12,9 @@ class produk extends Model
     protected $table = 'produk';
     protected $primarykey ='id_produk';
     protected $fillable = ['id_produk', 'nama_produk', 'harga', 'stok', 'foto'];
+
+    public function kategori()
+    {
+        return $this->hasMany(Kategori::class);
+    }
 }

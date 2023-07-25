@@ -13,6 +13,12 @@ class produkcontroller extends Controller
           return view('produk.index', ['produk'=>$produk]);
     }
 
+    public function show(Produk $produk)
+    {
+        $produk = Produk::all();
+        return view('products', compact('produk'));
+    }
+
     public function tambah()
     {
         return view ('produk.form');

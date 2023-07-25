@@ -23,9 +23,19 @@ use App\Http\Controllers\Admin\dashboardcontrollers;
 */
 
 
-Route::get('/', function () {
-    return view('welcome');
-})->middleware('auth');
+Route::get('/', [ArtikelController::class, 'show']);
+
+Route::get('/products', [produkcontroller::class, 'show']);
+
+Route::get('/about', function () {
+    return view('about');
+});
+Route::get('/contact', function () {
+    return view('contact');
+});
+Route::get('/varian', function () {
+    return view('varian');
+});
 
 Route::get('/dashboard', function () {
    return view('dashboard');
@@ -40,7 +50,7 @@ Route::get('/dashboard', function () {
     Route::get('edit/{id}', 'edit')->name('kategori.edit');
     Route::post('edit/{id}', 'update')->name('kategori.tambah.update');
     Route::get('hapus/{id}', 'hapus')->name('kategori.hapus');
-}); 
+})->middleware('auth'); 
 
 Route::controller(produkcontroller::class)->prefix('produk')->group(function () {
     Route::get('', 'index')->name('produk');
@@ -49,7 +59,7 @@ Route::controller(produkcontroller::class)->prefix('produk')->group(function () 
     Route::get('edit/{id}', 'edit')->name('produk.edit');
     Route::post('edit/{id}', 'update')->name('produk.tambah.update');
     Route::get('hapus/{id}', 'hapus')->name('produk.hapus');
-}); 
+})->middleware('auth'); 
 
 Route::controller(promocontroller::class)->prefix('promo')->group(function () {
     Route::get('', 'index')->name('promo');
@@ -58,12 +68,12 @@ Route::controller(promocontroller::class)->prefix('promo')->group(function () {
     Route::get('edit/{id}', 'edit')->name('promo.edit');
     Route::post('edit/{id}', 'update')->name('promo.tambah.update');
     Route::get('hapus/{id}', 'hapus')->name('promo.hapus');
-}); 
+})->middleware('auth'); 
 
 Route::controller(uploadcontroller::class)->prefix('upload')->group(function () {
 Route::get('/upload', 'uploadcontroller@upload');
 Route::post('/upload/proses', 'uploadcontroller@proses_upload');
-});
+})->middleware('auth');
 
 Route::controller(ArtikelController::class)->prefix('artikel')->group(function () {
     Route::get('', 'index')->name('artikel');
@@ -72,15 +82,15 @@ Route::controller(ArtikelController::class)->prefix('artikel')->group(function (
     Route::get('edit/{id}', 'edit')->name('artikel.edit');
     Route::post('edit/{id}', 'update')->name('artikel.create.update');
     Route::get('destroy/{id}', 'destroy')->name('artikel.destroy');
-}); 
+})->middleware('auth'); 
 
 Route::get('/login', [LoginController::class, 'showLoginForm']);
 Route::get('/logout', [LoginController::class, 'logout']);
-Route::get('/', [DashboardController::class, 'index'])->middleware('auth');
+Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+//Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::controller(TransaksiController::class)->prefix('transaksi')->group(function () {
     Route::get('', 'index')->name('transaksi');
@@ -89,4 +99,4 @@ Route::controller(TransaksiController::class)->prefix('transaksi')->group(functi
     Route::get('edit/{id}', 'edit')->name('transaksi.edit');
     Route::post('edit/{id}', 'update')->name('transaksi.tambah.update');
     Route::get('hapus/{id}', 'hapus')->name('transaksi.hapus');
-}); 
+})->middleware('auth'); 
