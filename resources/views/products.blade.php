@@ -26,7 +26,7 @@
                             @endforeach
                             </div>
                             <div>
-                                <a href="#">
+                                <a href="https://wa.me/6283143463416?text=Nama%20%3A%0AProduk%20%3A%20Tahu%20Walik%0Avarian%20%3A%20Original%2FMercon%2FMix%0Apcs%20%3A%20%0Ano%20hp%20%3A%20%0Aalamat%20%3A%20" target="_blank">
                                     <button type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Pesan Sekarang !</button>
                                 </a>
                             </div>

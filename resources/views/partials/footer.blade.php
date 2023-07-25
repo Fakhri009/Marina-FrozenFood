@@ -4,8 +4,8 @@
         <h2 class="text-2xl font-medium">Marina Frozen</h2>
         <p class="text-[0.60rem]">Copyright 2023</p>
         <div class="flex">
-            <img src="" alt="Fb">
-            <img src="" alt="Tw">
+            <a href="https://instagram.com/marinaafrozen" target="_blank" class="mr-4 text-xs"><i class="fa-brands fa-instagram "></i> marinaafrozen</a>
+            <a href="https://wa.me/6283143463416" target="_blank" class="mr-4 text-xs"><i class="fa-brands fa-whatsapp cursor-pointer"></i> Syifa</a>
         </div>
     </div>
     
