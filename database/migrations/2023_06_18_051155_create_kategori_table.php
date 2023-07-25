@@ -15,7 +15,7 @@ return new class extends Migration
         Schema::create('kategori', function (Blueprint $table) {
             $table->id();
             $table->string('id_kategori')->unique();
-            $table->foreignId('produk_id');
+            $table->foreignId('produk_id')->default(1);
             $table->string('nama_kategori')->nullable();
             $table->timestamps();
         });

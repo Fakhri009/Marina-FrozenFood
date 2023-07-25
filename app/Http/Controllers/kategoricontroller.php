@@ -19,11 +19,16 @@ class kategoricontroller extends Controller
 
     public function tambah()
     {
-        $kategori = Kategori::get();
         return view ('kategori.form');
     }
     public function simpan(Request $request) 
     {
+        // $request->validate([
+        //     'id_kategori' => 'required',
+        //     'produk_id' => 'required',
+        //     'nama_kategori' => 'required',
+        // ]);
+
         $data = [
             'id_kategori'=>$request->id_kategori,
             'produk_id'=>$request->produk_id,
