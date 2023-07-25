@@ -100,3 +100,4 @@ Route::controller(TransaksiController::class)->prefix('transaksi')->group(functi
     Route::post('edit/{id}', 'update')->name('transaksi.tambah.update');
     Route::get('hapus/{id}', 'hapus')->name('transaksi.hapus');
 })->middleware('auth'); 
+Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
